@@ -45,6 +45,7 @@ let doIt = async ()=>{
             new mod({...i,time:new Date(),rank:rd++}).save();
         }
     }
+    process.exit(0)
 };
 
 doIt();

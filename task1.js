@@ -33,7 +33,7 @@ let doIt = async ()=>{
             console.log(e)
         }
         for (let i of res.data) {
-            new modpack({...i,time:new Date(),rank:ra++}).save();
+            await new modpack({...i,time:new Date(),rank:ra++}).save();
 
         }
         try{
@@ -42,7 +42,7 @@ let doIt = async ()=>{
             console.log(e)
         }
         for (let i of res.data) {
-            new mod({...i,time:new Date(),rank:rd++}).save();
+            await new mod({...i,time:new Date(),rank:rd++}).save();
         }
     }
     process.exit(0)
